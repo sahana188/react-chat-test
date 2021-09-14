@@ -71,7 +71,7 @@ class App extends Component {
 
   render() {
     return this.state.loading === true ? (
-      <div role="status">
+      <div className="text-success" role="status">
         <span className="sr-only">Loading...</span>
       </div>
     ) : (
