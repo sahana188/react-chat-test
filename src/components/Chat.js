@@ -102,7 +102,7 @@ export default class Chat extends Component {
         </div>
             <form onSubmit={this.handleSubmit} className="mx-3">
   
-          <textarea className="form-control" name="content" onChange={this.handleChange} value={this.state.text}></textarea>
+          <textarea className="form-control" name="content" onChange={this.handleChange} value={this.state.text?this.state.text:this.state.content}></textarea>
           <div className="d-css">
               {
                   this.state.show?  <span className="em-class">
