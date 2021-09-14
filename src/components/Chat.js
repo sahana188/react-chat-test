@@ -51,7 +51,7 @@ export default class Chat extends Component {
     const chatArea = this.myRef.current;
     try {
       await db.ref("chats").push({
-        content: this.state.text,
+        content: this.state.text?this.state.text:this.state.content,
         timestamp: Date.now(),
         uid: this.state.user.uid
       });
